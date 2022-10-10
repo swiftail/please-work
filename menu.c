@@ -23,18 +23,23 @@ int main() {
         }
     }
 
+    int result;
     switch (mode) {
         case MODE_IDX_FIRST_NG:
-            index_first_negative(arr, arr_size);
+            result = workload_idx_first_ng(arr, arr_size);
+            printf("%d", result);
             break;
         case MODE_IDX_LAST_NG:
-            index_last_negative(arr, arr_size);
+            result = workload_idx_last_ng(arr, arr_size);
+            printf("%d", result);
             break;
         case MODE_MULTI_BETWEEN_NEGATIVE:
-            multi_between_negative(arr, arr_size);
+            result = workload_multi_between_negative(arr, arr_size);
+            printf("%d", result);
             break;
         case MODE_MULTI_BEFORE_AND_AFTER_NEGATIVE:
-            multi_before_and_after_negative(arr, arr_size);
+            result = workload_multi_before_and_after_negative(arr, arr_size);
+            printf("%d", result);
             break;
         default:
             puts("Данные некорректны\n");

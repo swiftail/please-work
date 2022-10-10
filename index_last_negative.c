@@ -1,10 +1,12 @@
-#include <stdio.h>
-
-#include "arr_data.h"
-#include "get_arr_data.h"
 #include "index_last_negative.h"
 
-void index_last_negative(int *arr, int size) {
-    struct arr_data result = get_arr_data(arr, size);
-    printf("%d\n", result.last_negative_idx);
+int workload_idx_last_ng(int *arr, int size) {
+    int last_idx = -1;
+    for (int i = 0; i < size; i++) {
+        int e = arr[i];
+        if (e < 0) {
+            last_idx = i;
+        }
+    }
+    return last_idx;
 }

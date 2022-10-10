@@ -1,12 +1,11 @@
-#include <stdio.h>
-
-#include "arr_data.h"
-#include "get_arr_data.h"
+#include "index_first_negative.h"
+#include "index_last_negative.h"
 #include "get_product.h"
 #include "multi_between_negative.h"
 
-void multi_between_negative(int *arr, int size) {
-    struct arr_data ad = get_arr_data(arr, size);
-    int result = get_product(arr, ad.first_negative_idx, ad.last_negative_idx);
-    printf("%d\n", result);
+int workload_multi_between_negative(int *arr, int size) {
+    int first_negative_idx = workload_idx_first_ng(arr, size);
+    int last_negative_idx = workload_idx_last_ng(arr, size);
+    int result = get_product(arr, first_negative_idx, last_negative_idx);
+    return result;
 }
