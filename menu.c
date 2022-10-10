@@ -25,16 +25,16 @@ int main() {
 
     switch (mode) {
         case MODE_IDX_FIRST_NG:
-            workload_idx_first_ng(arr, arr_size);
+            index_first_negative(arr, arr_size);
             break;
         case MODE_IDX_LAST_NG:
-            workload_idx_last_ng(arr, arr_size);
+            index_last_negative(arr, arr_size);
             break;
         case MODE_MULTI_BETWEEN_NEGATIVE:
-            workload_multi_between_negative(arr, arr_size);
+            multi_between_negative(arr, arr_size);
             break;
         case MODE_MULTI_BEFORE_AND_AFTER_NEGATIVE:
-            workload_multi_before_and_after_negative(arr, arr_size);
+            multi_before_and_after_negative(arr, arr_size);
             break;
         default:
             puts("Данные некорректны\n");
